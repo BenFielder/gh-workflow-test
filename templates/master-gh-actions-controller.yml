@@ -1,0 +1,23 @@
+# Don't edit this file directly! It will be overwritten if you update, You can make changes in "BenFielder/github-actions-controller"
+name: Github Actions Controller
+on: workflow_dispatch
+
+jobs:
+    Update-deployment-workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo code
+              uses: actions/checkout@v4
+              with:
+                repository: "BenFielder/github-actions-controller"
+
+            - name: Create branch
+              run: | 
+                git branch gh-actions-controller-update
+                git switch gh-actions-controller-update
+
+
+            - name: Create Pull Request
+              run: gh pr create -B main -H gh-actions-controller-update -- 'GH Actions Controller Update' --body 'Updating workflows'
+              env:
+                GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}
