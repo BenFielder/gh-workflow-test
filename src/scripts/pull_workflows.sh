@@ -32,22 +32,22 @@ mkdir -p "$WORKFLOWS_DIR"
 
 # Copy selected workflows
 if [[ "$TESTING_WORKFLOWS" == "true" ]]; then
-  echo "✅ Copying testing workflows..."
+  echo "Copying testing workflows..."
   cp templates/templates/testing/*.yml "$WORKFLOWS_DIR/" || echo "No testing workflows found"
 fi
 
 if [[ "$LINTING_WORKFLOWS" == "true" ]]; then
-  echo "✅ Copying linting workflows..."
+  echo "Copying linting workflows..."
   cp templates/templates/linting/*.yml "$WORKFLOWS_DIR/" || echo "No linting workflows found"
 fi
 
 if [[ "$BUILD_WORKFLOWS" == "true" ]]; then
-  echo "✅ Copying build workflows..."
+  echo "Copying build workflows..."
   cp templates/templates/building/*.yml "$WORKFLOWS_DIR/" || echo "No build workflows found"
 fi
 
 if [[ "$DEPLOYMENT_WORKFLOWS" == "true" ]]; then
-  echo "✅ Copying deployment workflows..."
+  echo "Copying deployment workflows..."
   cp templates/templates/deploying/*.yml "$WORKFLOWS_DIR/" || echo "No deployment workflows found"
 fi
 
