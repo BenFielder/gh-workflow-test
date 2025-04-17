@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/BenFielder/github-actions-controller/compare/v1.5.0...v1.6.0) (2025-04-17)
+
+
+### Features
+
+* Add path to logic ([ceb6ec1](https://github.com/BenFielder/github-actions-controller/commit/ceb6ec1afce51a957c825a0a6476ddeb731f0d12))
+
 ## [1.5.0](https://github.com/BenFielder/github-actions-controller/compare/v1.4.0...v1.5.0) (2025-04-17)
 
 
