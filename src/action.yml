@@ -9,7 +9,7 @@ inputs:
     description: "Workflows for linting your code"
     default: false
   
-  building_workflows:
+  build_workflows:
     description: "Workflows for building your code"
     default: false
   

@@ -13,8 +13,8 @@ if [[ "${{ inputs.linting_workflows }}" == "true" ]]; then
   cp /templates/linting/*.yml $WORKFLOWS_DIR/
 fi
 
-if [[ "${{ inputs.building_workflows }}" == "true" ]]; then
-  echo "Adding building workflows..."
+if [[ "${{ inputs.build_workflows }}" == "true" ]]; then
+  echo "Adding build workflows..."
   cp /templates/building/*.yml $WORKFLOWS_DIR/
 fi
 
