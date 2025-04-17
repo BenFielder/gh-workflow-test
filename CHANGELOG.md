@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/BenFielder/github-actions-controller/compare/v1.7.0...v1.8.0) (2025-04-17)
+
+
+### Features
+
+* Add checkout step ([32b4881](https://github.com/BenFielder/github-actions-controller/commit/32b4881a8c1f129c6ee7b051ef12d8213349f90c))
+
 ## [1.7.0](https://github.com/BenFielder/github-actions-controller/compare/v1.6.0...v1.7.0) (2025-04-17)
 
 
