@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/BenFielder/github-actions-controller/compare/v1.2.0...v1.3.0) (2025-04-17)
+
+
+### Features
+
+* Update workflow inputs ([2b7b55b](https://github.com/BenFielder/github-actions-controller/commit/2b7b55b11f600e448e435f2e6337e110d1483b82))
+
 ## [1.2.0](https://github.com/BenFielder/github-actions-controller/compare/v1.1.0...v1.2.0) (2025-04-17)
 
 
