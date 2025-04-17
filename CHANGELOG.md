@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/BenFielder/github-actions-controller/compare/v1.6.0...v1.7.0) (2025-04-17)
+
+
+### Features
+
+* Update script pathway ([c1d13ac](https://github.com/BenFielder/github-actions-controller/commit/c1d13ac52fbdb2d847b4b9f847e0fd052b3cf660))
+
 ## [1.6.0](https://github.com/BenFielder/github-actions-controller/compare/v1.5.0...v1.6.0) (2025-04-17)
 
 
