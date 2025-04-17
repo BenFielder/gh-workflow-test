@@ -26,7 +26,7 @@ runs:
 
     - name: Run controller logic
       run: |
-        bash "${{ github.action_path }}/scripts/run.sh" \
+        bash "${{ github.action_path }}/src/scripts/pull_workflows.sh" \
           "${{ inputs.testing_workflows }}" \
           "${{ inputs.linting_workflows }}" \
           "${{ inputs.build_workflows }}" \
