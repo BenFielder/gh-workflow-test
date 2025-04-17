@@ -26,5 +26,5 @@ runs:
 
     - name: Run controller logic
       run: |
-        bash scripts/pull_workflows.sh "${{ inputs.testing_workflows }}" "${{ inputs.linting_workflows }}" "${{ inputs.build_workflows }}" "${{ inputs.deployment_workflows }}"
+        bash src/scripts/pull_workflows.sh "${{ inputs.testing_workflows }}" "${{ inputs.linting_workflows }}" "${{ inputs.build_workflows }}" "${{ inputs.deployment_workflows }}"
       shell: bash
