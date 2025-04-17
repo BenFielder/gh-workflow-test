@@ -13,40 +13,61 @@ jobs:
         runs-on: ubuntu-latest
         steps:
 
-            - name: Create branch
-              run: | 
-                git branch gh-actions-controller-update
-                git switch gh-actions-controller-update
-            
+           - name: Checkout self
+             uses: actions/checkout@v4
+
+           - name: Create branch
+             run: |
+                    git checkout -b gh-actions-controller-update
+    
             # Comment or uncomment these depending on what workflows you want to use  
-            - name: Pull changes on self
-              uses: actions/checkout@v4
-              with:
-                sparse-checkout: BenFielder/github-actions-controller/templates/master-gh-actions-controller.yml
-            
-            - name: Pull Linting Workflows
-              uses: actions/checkout@v4
-              with:
-                repository: BenFielder/github-actions-controller/templates/linting
+           - name: Pull Github Actions Controller Repo
+             uses: actions/checkout@v4
+             with:
+                repository: "BenFielder/github-actions-controller"
+                path: templates
 
-            - name: Pull Building Workflows
-              uses: actions/checkout@v4
-              with:
-                  repository: BenFielder/github-actions-controller/templates/building
+           - name: List files
+             run: |
+                ls -R templates
 
-            - name: Pull Testing Workflows
-              uses: actions/checkout@v4
-              with:
-                  repository: BenFielder/github-actions-controller/templates/testing
+           - name: Pull Linting workflows
+             run: |
+                mkdir -p .github/workflows
+                cp templates/templates/linting/*.yml .github/workflows/ || echo "No linting workflows found"
+              
 
-            - name: Pull Deployment Workflows
-              uses: actions/checkout@v4
-              with:
-                  repository: BenFielder/github-actions-controller/templates/deploying
+           - name: Pull Building workflows
+             run: |
+                mkdir -p .github/workflows
+                cp templates/templates/building/*.yml .github/workflows/ || echo "No building workflows found"
 
-            - name: Create Pull Request
-              run: | 
+           - name: Pull Testing Workflows
+             run: |
+                mkdir -p .github/workflows
+                cp templates/templates/testing/*.yml .github/workflows/ || echo "No testing workflows found"
+
+           - name: Pull Deployment Workflows
+             run: |
+                mkdir -p .github/workflows
+                cp templates/templates/deploying/*.yml .github/workflows/ || echo "No deployment workflows found"
+
+           - name: Configure user
+             run: |
+                git config --global user.name "Github Actions Bot"
+                git config --global user.email "actions@github.com"     
+                  
+           - name: Commit changes
+             run: |
+                git add .
+                git commit -m "chore: Update workflows"
+
+           - name: Push branch
+             run: git push -f origin gh-actions-controller-update
+              
+           - name: Create Pull Request
+             run: | 
                 gh pr create --base main --head gh-actions-controller-update --title "chore: GH Actions Controller Update" --body "Updating workflows"
-              env:
+             env:
                 GH_DEBUG: 1
                 GITHUB_TOKEN: ${{ secrets.GH_AC_TOKEN }}
