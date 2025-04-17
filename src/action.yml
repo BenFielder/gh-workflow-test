@@ -1,20 +1,30 @@
 name: "Github Actions Controller"
 description: "Pull & Update specific workflows into a repository"
+
 inputs:
   testing_workflows:
     description: "Workflows for running testing of your code"
-    default: false
-  
+    default: "false"
   linting_workflows:
     description: "Workflows for linting your code"
-    default: false
-  
+    default: "false"
   build_workflows:
     description: "Workflows for building your code"
-    default: false
-  
+    default: "false"
   deployment_workflows:
     description: "Workflows for deploying your code"
-    default: false
-  
-  
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      shell: bash
+
+    - name: Run controller logic
+      run: |
+        bash scripts/pull_workflows.sh "${{ inputs.testing_workflows }}" "${{ inputs.linting_workflows }}" "${{ inputs.build_workflows }}" "${{ inputs.deployment_workflows }}"
+      shell: bash
