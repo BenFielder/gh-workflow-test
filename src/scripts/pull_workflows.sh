@@ -21,6 +21,9 @@ echo "  - Deployment: $DEPLOYMENT_WORKFLOWS"
 git config --global user.name "github-actions[bot]"
 git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+# Force Git to use the GitHub Actions token
+git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}"
+
 # Create new branch
 git checkout -b "$BRANCH_NAME" || git switch "$BRANCH_NAME"
 
