@@ -1,4 +1,7 @@
     deployment:
+    on: push
+    jobs:
+      build-code:
       needs: testing
       runs-on: ubuntu-latest
       steps:
