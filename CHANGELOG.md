@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/BenFielder/github-actions-controller/compare/v1.8.0...v1.9.0) (2025-04-22)
+
+
+### Features
+
+* Update to set remote ([7b94516](https://github.com/BenFielder/github-actions-controller/commit/7b945163ef05dba77e163c0e5d61025bd36bc990))
+
 ## [1.8.0](https://github.com/BenFielder/github-actions-controller/compare/v1.7.0...v1.8.0) (2025-04-17)
 
 
