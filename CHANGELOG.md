@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/BenFielder/github-actions-controller/compare/v1.11.0...v1.12.0) (2025-04-23)
+
+
+### Features
+
+* add use of gh app token ([170e58d](https://github.com/BenFielder/github-actions-controller/commit/170e58dadafdcaf26053ec6e0250cc5f449b9820))
+
 ## [1.11.0](https://github.com/BenFielder/github-actions-controller/compare/v1.10.0...v1.11.0) (2025-04-23)
 
 
