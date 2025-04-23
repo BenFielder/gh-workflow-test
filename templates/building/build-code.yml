@@ -1,5 +1,9 @@
     deployment:
     on: push
+    permissions:
+    contents: read
+    actions: read
+    checks: write
     jobs:
       build-code:
       needs: testing
