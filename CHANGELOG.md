@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/BenFielder/github-actions-controller/compare/v1.13.0...v1.14.0) (2025-04-23)
+
+
+### Features
+
+* Add sync on gh secrets ([e37ee96](https://github.com/BenFielder/github-actions-controller/commit/e37ee96faa14bd38aba61235fd70657050a92f21))
+
 ## [1.13.0](https://github.com/BenFielder/github-actions-controller/compare/v1.12.0...v1.13.0) (2025-04-23)
 
 
