@@ -30,6 +30,17 @@ runs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
       shell: bash
 
+    - name: Sync secrets
+      uses: jpoehnelt/secrets-sync-action@1.10.0
+      with:
+          GITHUB_TOKEN: ${{ secrets.GH_AC_TOKEN }}
+          SECRETS: |
+            ^APP_ID$
+            ^GITHUB_.*
+            ^APP_PRIVATE_KEY*
+          REPOSITORIES: |
+            ${{github.repository}}
+
     - name: Generate GitHub App Token
       id: generate_token
       uses: actions/create-github-app-token@v2.0.2
