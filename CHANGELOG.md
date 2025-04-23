@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/BenFielder/github-actions-controller/compare/v1.10.0...v1.11.0) (2025-04-23)
+
+
+### Features
+
+* add github token input ([bc1112c](https://github.com/BenFielder/github-actions-controller/commit/bc1112c3dbb85168bf157220ebba978b6b851943))
+
 ## [1.10.0](https://github.com/BenFielder/github-actions-controller/compare/v1.9.0...v1.10.0) (2025-04-23)
 
 
