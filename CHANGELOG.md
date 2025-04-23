@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/BenFielder/github-actions-controller/compare/v1.12.0...v1.13.0) (2025-04-23)
+
+
+### Features
+
+* test ([5aaeb1e](https://github.com/BenFielder/github-actions-controller/commit/5aaeb1e40be164f10528c3a5a12e483f3ef79b53))
+
 ## [1.12.0](https://github.com/BenFielder/github-actions-controller/compare/v1.11.0...v1.12.0) (2025-04-23)
 
 
