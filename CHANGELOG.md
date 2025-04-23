@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/BenFielder/github-actions-controller/compare/v1.9.0...v1.10.0) (2025-04-23)
+
+
+### Features
+
+* update build code permissions ([92a79d3](https://github.com/BenFielder/github-actions-controller/commit/92a79d34fe98bbf81bbecdc26c8760367d3191aa))
+
 ## [1.9.0](https://github.com/BenFielder/github-actions-controller/compare/v1.8.0...v1.9.0) (2025-04-22)
 
 
