@@ -2,16 +2,16 @@ name: "Github Actions Controller"
 description: "Pull & Update specific workflows into a repository"
 
 inputs:
-  testing_workflows:
+  pull_testing_workflows:
     description: "Workflows for running testing of your code"
     default: "false"
-  linting_workflows:
+  pull_linting_workflows:
     description: "Workflows for linting your code"
     default: "false"
-  build_workflows:
+  pull_build_workflows:
     description: "Workflows for building your code"
     default: "false"
-  deployment_workflows:
+  pull_deployment_workflows:
     description: "Workflows for deploying your code"
     default: "false"
   github_token:
